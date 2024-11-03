@@ -1,0 +1,176 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "iPhone 15 Pro",
+      "product_image": "https://i.ibb.co.com/m6tmtqz/iphone-15pro-max.jpg",
+      "category": "Phone",
+      "price": 1199.99,
+      "description": "The iPhone 15 Pro features a new titanium design, advanced camera system, and an A17 Bionic chip.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "48MP main camera",
+        "USB-C port",
+        "iOS 17"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 2,
+      "product_title": "MacBook Pro 16-inch",
+      "product_image": "https://i.ibb.co.com/xzjJqCr/macBook.jpg",
+      "category": "Laptop",
+      "price": 2499.99,
+      "description": "The MacBook Pro 16-inch with the M3 Pro chip delivers unparalleled performance and a stunning Liquid Retina XDR display.",
+      "Specification": [
+        "16-inch Liquid Retina XDR display",
+        "Apple M3 Pro chip",
+        "32GB unified memory",
+        "1TB SSD storage",
+        "macOS Sonoma"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 3,
+      "product_title": "AirPods Pro (2nd Generation)",
+      "product_image": "https://i.ibb.co.com/Vqzw4s8/airPods.jpg",
+      "category": "AirPods",
+      "price": 249.99,
+      "description": "The AirPods Pro 2nd Gen offer advanced active noise cancellation, personalized spatial audio, and a MagSafe charging case.",
+      "Specification": [
+        "Active Noise Cancellation",
+        "MagSafe charging case",
+        "Transparency mode",
+        "Up to 6 hours of listening time",
+        "H2 chip"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 4,
+      "product_title": "Anker PowerCore 20,000mAh",
+      "product_image": "https://i.ibb.co.com/qRC4ZSf/power-cord.png",
+      "category": "Powerbank",
+      "price": 49.99,
+      "description": "An ultra-high-capacity portable charger with dual USB ports for fast charging your devices on the go.",
+      "Specification": [
+        "20,000mAh capacity",
+        "Dual USB output ports",
+        "Fast charging technology",
+        "Compact design",
+        "LED power indicator"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 5,
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://i.ibb.co.com/6N0X4vC/samsung-s23-ultra-phantom-black.jpg",
+      "category": "Phone",
+      "price": 1399.99,
+      "description": "The Galaxy S23 Ultra features a massive 200MP camera, S Pen integration, and an advanced Snapdragon processor.",
+      "Specification": [
+        "6.8-inch Dynamic AMOLED display",
+        "Snapdragon 8 Gen 2 processor",
+        "200MP main camera",
+        "S Pen support",
+        "5000mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.9
+    },
+
+    {
+      "product_id": 6,
+      "product_title": "Oculus Quest 3",
+      "product_image": "https://i.ibb.co.com/5hZfvvK/Acheter-Meta-Quest-3.webp",
+      "category": "VR Goggles",
+      "price": 499.99,
+      "description": "The Oculus Quest 3 offers an immersive VR experience with a new high-resolution display, advanced optics, and built-in hand tracking.",
+      "Specification": [
+        "4K+ resolution per eye",
+        "120Hz refresh rate",
+        "Hand and gesture tracking",
+        "Built-in audio system",
+        "Wireless setup"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+
+    {
+      "product_id": 7,
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/TMYzXjB/gsmarena-001.jpg",
+      "category": "Headphones",
+      "price": 399.99,
+      "description": "The Sony WH-1000XM5 headphones deliver industry-leading noise cancellation and crystal-clear sound quality, perfect for audiophiles.",
+      "Specification": [
+        "Adaptive noise cancellation",
+        "30 hours of battery life",
+        "Touch control",
+        "Speak-to-chat technology",
+        "Wireless Bluetooth connectivity"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 8,
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://i.ibb.co.com/WGLmnt6/apple-watch.jpg",
+      "category": "Smartwatch",
+      "price": 399.99,
+      "description": "The Apple Watch Series 9 features an improved processor, new health sensors, and a brighter display for an enhanced experience.",
+      "Specification": [
+        "Always-on Retina display",
+        "Blood oxygen and ECG monitoring",
+        "Up to 18 hours of battery life",
+        "Water-resistant design",
+        "watchOS 10"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 9,
+      "product_title": "Dell XPS 13 Plus",
+      "product_image": "https://i.ibb.co.com/j62n93T/dell-xps-13-plus-2.jpg",
+      "category": "Laptop",
+      "price": 1899.99,
+      "description": "The Dell XPS 13 Plus features an edge-to-edge display, new touch bar interface, and top-of-the-line Intel processors.",
+      "Specification": [
+        "13.4-inch InfinityEdge display",
+        "12th Gen Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "Windows 11 Pro"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+        "product_id": 10,
+        "product_title": "Samsung Galaxy Watch 6",
+        "product_image": "https://i.ibb.co.com/M8ppjYC/smart-watch.webp",
+        "category": "Smartwatch",
+        "price": 349.99,
+        "description": "The Samsung Galaxy Watch 6 features a sleek design, advanced health monitoring, and improved battery life with Wear OS.",
+        "Specification": [
+          "1.5-inch Super AMOLED display",
+          "Heart rate and blood pressure monitoring",
+          "Sleep tracking and ECG",
+          "Up to 40 hours of battery life",
+          "Wear OS with Google Assistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+      }
+      
+  ]
+  
