@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
+import { addToCartList, addToWishList } from "../LoadToDataBase/LoadToDataBase";
 
 const ProductDetails = () => {
     const details = useLoaderData();
@@ -17,6 +18,14 @@ const ProductDetails = () => {
     }, [details, makeIntId]);
 
     const {product_image, product_title, price, availability, Specification, rating, description} = products;
+
+    const handleAddToCart = (product_id) =>{
+        addToCartList(product_id);
+    }
+
+    const handleAddToWishList = (product_id) =>{
+        addToWishList(product_id);
+    }
 
     return (
         <div className="h-[900px] md:h-[650px] ">
@@ -50,8 +59,8 @@ const ProductDetails = () => {
                             <p className="bg-base-200 px-3 py-1 text-black font-bold rounded-full">{rating}</p>
                         </div>
                         <div className="flex gap-2 items-center">
-                            <button className="bg-purple-600 flex items-center gap-3 text-white px-6 py-2 rounded-full"><span>Add To Cart </span><MdOutlineShoppingCart className="text-xl"></MdOutlineShoppingCart></button>
-                            <Link className="border-2 p-[11px] w-[40px] h-[40px] rounded-full">
+                            <button onClick={()=>{handleAddToCart(product_id)}} className="bg-purple-600 flex items-center gap-3 text-white px-6 py-2 rounded-full"><span>Add To Cart </span><MdOutlineShoppingCart className="text-xl"></MdOutlineShoppingCart></button>
+                            <Link onClick={()=>handleAddToWishList(product_id)} className="border-2 p-[11px] w-[40px] h-[40px] rounded-full">
                                 <FaRegHeart></FaRegHeart>
                             </Link>
                         </div>
