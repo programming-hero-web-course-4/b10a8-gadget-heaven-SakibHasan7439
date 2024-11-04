@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 const AllProducts = () => {
     const allProducts = useLoaderData();
     const {category} = useParams();
-    console.log(category);
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
