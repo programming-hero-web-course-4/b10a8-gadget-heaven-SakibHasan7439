@@ -1,7 +1,9 @@
+import Navbar from "../Components/Navbar";
+
 const MainLayouts = () => {
     return (
-        <div>
-            <h3>Hello this is main layout page</h3>
+        <div className="container mx-auto px-2 md:px-6">
+            <Navbar></Navbar>
         </div>
     );
 };

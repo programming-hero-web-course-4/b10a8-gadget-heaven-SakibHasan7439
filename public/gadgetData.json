@@ -1,8 +1,9 @@
 [
+  [
     {
       "product_id": 1,
       "product_title": "iPhone 15 Pro",
-      "product_image": "https://i.ibb.co.com/m6tmtqz/iphone-15pro-max.jpg",
+      "product_image": "url_to_image.jpg",
       "category": "Phone",
       "price": 1199.99,
       "description": "The iPhone 15 Pro features a new titanium design, advanced camera system, and an A17 Bionic chip.",
@@ -18,8 +19,93 @@
     },
     {
       "product_id": 2,
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "url_to_image.jpg",
+      "category": "Phone",
+      "price": 1399.99,
+      "description": "The Galaxy S23 Ultra features a massive 200MP camera, S Pen integration, and an advanced Snapdragon processor.",
+      "Specification": [
+        "6.8-inch Dynamic AMOLED display",
+        "Snapdragon 8 Gen 2 processor",
+        "200MP main camera",
+        "S Pen support",
+        "5000mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.9
+    },
+    {
+      "product_id": 3,
+      "product_title": "Google Pixel 8",
+      "product_image": "url_to_image.jpg",
+      "category": "Phone",
+      "price": 799.99,
+      "description": "The Google Pixel 8 comes with an advanced AI camera, Tensor G3 chip, and the latest Android features.",
+      "Specification": [
+        "6.2-inch OLED display",
+        "Tensor G3 processor",
+        "50MP dual camera system",
+        "Android 14",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 4,
+      "product_title": "OnePlus 11 Pro",
+      "product_image": "url_to_image.jpg",
+      "category": "Phone",
+      "price": 899.99,
+      "description": "The OnePlus 11 Pro features a smooth 120Hz AMOLED display, Snapdragon 8 Gen 2 chip, and a triple-camera setup.",
+      "Specification": [
+        "6.7-inch Fluid AMOLED display",
+        "Snapdragon 8 Gen 2",
+        "50MP main camera",
+        "100W fast charging",
+        "Android 13"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 5,
+      "product_title": "Xiaomi Mi 13 Ultra",
+      "product_image": "url_to_image.jpg",
+      "category": "Phone",
+      "price": 1099.99,
+      "description": "The Xiaomi Mi 13 Ultra features a Leica-tuned camera system, WQHD+ display, and a 5000mAh battery with ultra-fast charging.",
+      "Specification": [
+        "6.73-inch WQHD+ AMOLED display",
+        "Leica camera system",
+        "Snapdragon 8 Gen 2",
+        "90W wired charging",
+        "Android 14"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 6,
+      "product_title": "Sony Xperia 1 V",
+      "product_image": "url_to_image.jpg",
+      "category": "Phone",
+      "price": 1199.99,
+      "description": "The Sony Xperia 1 V is a filmmaker's dream with its 4K OLED display, advanced video features, and top-notch performance.",
+      "Specification": [
+        "6.5-inch 4K OLED display",
+        "Snapdragon 8 Gen 2",
+        "12MP triple-lens camera",
+        "Cinematic video recording",
+        "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 7,
       "product_title": "MacBook Pro 16-inch",
-      "product_image": "https://i.ibb.co.com/xzjJqCr/macBook.jpg",
+      "product_image": "url_to_image.jpg",
       "category": "Laptop",
       "price": 2499.99,
       "description": "The MacBook Pro 16-inch with the M3 Pro chip delivers unparalleled performance and a stunning Liquid Retina XDR display.",
@@ -34,113 +120,9 @@
       "rating": 4.7
     },
     {
-      "product_id": 3,
-      "product_title": "AirPods Pro (2nd Generation)",
-      "product_image": "https://i.ibb.co.com/Vqzw4s8/airPods.jpg",
-      "category": "AirPods",
-      "price": 249.99,
-      "description": "The AirPods Pro 2nd Gen offer advanced active noise cancellation, personalized spatial audio, and a MagSafe charging case.",
-      "Specification": [
-        "Active Noise Cancellation",
-        "MagSafe charging case",
-        "Transparency mode",
-        "Up to 6 hours of listening time",
-        "H2 chip"
-      ],
-      "availability": true,
-      "rating": 4.5
-    },
-    {
-      "product_id": 4,
-      "product_title": "Anker PowerCore 20,000mAh",
-      "product_image": "https://i.ibb.co.com/qRC4ZSf/power-cord.png",
-      "category": "Powerbank",
-      "price": 49.99,
-      "description": "An ultra-high-capacity portable charger with dual USB ports for fast charging your devices on the go.",
-      "Specification": [
-        "20,000mAh capacity",
-        "Dual USB output ports",
-        "Fast charging technology",
-        "Compact design",
-        "LED power indicator"
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 5,
-      "product_title": "Samsung Galaxy S23 Ultra",
-      "product_image": "https://i.ibb.co.com/6N0X4vC/samsung-s23-ultra-phantom-black.jpg",
-      "category": "Phone",
-      "price": 1399.99,
-      "description": "The Galaxy S23 Ultra features a massive 200MP camera, S Pen integration, and an advanced Snapdragon processor.",
-      "Specification": [
-        "6.8-inch Dynamic AMOLED display",
-        "Snapdragon 8 Gen 2 processor",
-        "200MP main camera",
-        "S Pen support",
-        "5000mAh battery"
-      ],
-      "availability": false,
-      "rating": 4.9
-    },
-
-    {
-      "product_id": 6,
-      "product_title": "Oculus Quest 3",
-      "product_image": "https://i.ibb.co.com/5hZfvvK/Acheter-Meta-Quest-3.webp",
-      "category": "VR Goggles",
-      "price": 499.99,
-      "description": "The Oculus Quest 3 offers an immersive VR experience with a new high-resolution display, advanced optics, and built-in hand tracking.",
-      "Specification": [
-        "4K+ resolution per eye",
-        "120Hz refresh rate",
-        "Hand and gesture tracking",
-        "Built-in audio system",
-        "Wireless setup"
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-
-    {
-      "product_id": 7,
-      "product_title": "Sony WH-1000XM5",
-      "product_image": "https://i.ibb.co.com/TMYzXjB/gsmarena-001.jpg",
-      "category": "Headphones",
-      "price": 399.99,
-      "description": "The Sony WH-1000XM5 headphones deliver industry-leading noise cancellation and crystal-clear sound quality, perfect for audiophiles.",
-      "Specification": [
-        "Adaptive noise cancellation",
-        "30 hours of battery life",
-        "Touch control",
-        "Speak-to-chat technology",
-        "Wireless Bluetooth connectivity"
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
       "product_id": 8,
-      "product_title": "Apple Watch Series 9",
-      "product_image": "https://i.ibb.co.com/WGLmnt6/apple-watch.jpg",
-      "category": "Smartwatch",
-      "price": 399.99,
-      "description": "The Apple Watch Series 9 features an improved processor, new health sensors, and a brighter display for an enhanced experience.",
-      "Specification": [
-        "Always-on Retina display",
-        "Blood oxygen and ECG monitoring",
-        "Up to 18 hours of battery life",
-        "Water-resistant design",
-        "watchOS 10"
-      ],
-      "availability": true,
-      "rating": 4.6
-    },
-    {
-      "product_id": 9,
       "product_title": "Dell XPS 13 Plus",
-      "product_image": "https://i.ibb.co.com/j62n93T/dell-xps-13-plus-2.jpg",
+      "product_image": "url_to_image.jpg",
       "category": "Laptop",
       "price": 1899.99,
       "description": "The Dell XPS 13 Plus features an edge-to-edge display, new touch bar interface, and top-of-the-line Intel processors.",
@@ -155,22 +137,75 @@
       "rating": 4.7
     },
     {
-        "product_id": 10,
-        "product_title": "Samsung Galaxy Watch 6",
-        "product_image": "https://i.ibb.co.com/M8ppjYC/smart-watch.webp",
-        "category": "Smartwatch",
-        "price": 349.99,
-        "description": "The Samsung Galaxy Watch 6 features a sleek design, advanced health monitoring, and improved battery life with Wear OS.",
-        "Specification": [
-          "1.5-inch Super AMOLED display",
-          "Heart rate and blood pressure monitoring",
-          "Sleep tracking and ECG",
-          "Up to 40 hours of battery life",
-          "Wear OS with Google Assistant"
-        ],
-        "availability": true,
-        "rating": 4.5
-      }
+      "product_id": 9,
+      "product_title": "Apple Watch Series 9",
+      "product_image": "url_to_image.jpg",
+      "category": "Smartwatch",
+      "price": 399.99,
+      "description": "The Apple Watch Series 9 features an improved processor, new health sensors, and a brighter display for an enhanced experience.",
+      "Specification": [
+        "Always-on Retina display",
+        "Blood oxygen and ECG monitoring",
+        "Up to 18 hours of battery life",
+        "Water-resistant design",
+        "watchOS 10"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 10,
+      "product_title": "Samsung Galaxy Watch 6",
+      "product_image": "url_to_image.jpg",
+      "category": "Smartwatch",
+      "price": 349.99,
+      "description": "The Samsung Galaxy Watch 6 features a sleek design, advanced health monitoring, and improved battery life with Wear OS.",
+      "Specification": [
+        "1.5-inch Super AMOLED display",
+        "Heart rate and blood pressure monitoring",
+        "Sleep tracking and ECG",
+        "Up to 40 hours of battery life",
+        "Wear OS with Google Assistant"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 11,
+      "product_title": "AirPods Pro (2nd Generation)",
+      "product_image": "url_to_image.jpg",
+      "category": "AirPods",
+      "price": 249.99,
+      "description": "The AirPods Pro 2nd Gen offer advanced active noise cancellation, personalized spatial audio, and a MagSafe charging case.",
+      "Specification": [
+        "Active Noise Cancellation",
+        "MagSafe charging case",
+        "Transparency mode",
+        "Up to 6 hours of listening time",
+        "H2 chip"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 12,
+      "product_title": "JBL Tune 230NC",
+      "product_image": "url_to_image.jpg",
+      "category": "AirPods",
+      "price": 99.99,
+      "description": "The JBL Tune 230NC earbuds offer crystal-clear sound, noise cancellation, and up to 40 hours of combined playtime.",
+      "Specification": [
+        "Active Noise Cancellation",
+        "Up to 40 hours of playtime",
+        "IPX4 water resistance",
+        "4-mic call technology",
+        "Bluetooth 5.2"
+      ],
+      "availability": true,
+      "rating": 4.4
+    }
+  ]
+  
       
   ]
   
