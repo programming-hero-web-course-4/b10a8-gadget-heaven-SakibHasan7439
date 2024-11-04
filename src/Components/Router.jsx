@@ -7,6 +7,8 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Statistics from "../pages/Statistics";
 import DashBoard from "../pages/DashBoard";
+import AllProducts from "./AllProducts";
+import Category from "./Category";
 
 const Router = createBrowserRouter([
    {
@@ -17,7 +19,23 @@ const Router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=>fetch('/categoryData.json'),
+        children: [
+
+          {
+            path: 'category/:category',
+            element: <AllProducts></AllProducts>,
+            loader: ()=>fetch('/gadgetData.json')
+          },
+
+          {
+            path: '/',
+            element: <AllProducts></AllProducts>,
+            loader: ()=>fetch('/gadgetData.json')
+          },
+
+        ]
       },
 
       {

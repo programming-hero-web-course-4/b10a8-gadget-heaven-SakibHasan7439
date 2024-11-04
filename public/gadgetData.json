@@ -1,9 +1,9 @@
-[
+
   [
     {
       "product_id": 1,
       "product_title": "iPhone 15 Pro",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/m6tmtqz/iphone-15pro-max.jpg",
       "category": "Phone",
       "price": 1199.99,
       "description": "The iPhone 15 Pro features a new titanium design, advanced camera system, and an A17 Bionic chip.",
@@ -20,7 +20,7 @@
     {
       "product_id": 2,
       "product_title": "Samsung Galaxy S23 Ultra",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/6N0X4vC/samsung-s23-ultra-phantom-black.jpg",
       "category": "Phone",
       "price": 1399.99,
       "description": "The Galaxy S23 Ultra features a massive 200MP camera, S Pen integration, and an advanced Snapdragon processor.",
@@ -37,7 +37,7 @@
     {
       "product_id": 3,
       "product_title": "Google Pixel 8",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/sy2G90X/Pixel-8-Hazel-8910.jpg",
       "category": "Phone",
       "price": 799.99,
       "description": "The Google Pixel 8 comes with an advanced AI camera, Tensor G3 chip, and the latest Android features.",
@@ -54,7 +54,7 @@
     {
       "product_id": 4,
       "product_title": "OnePlus 11 Pro",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/HD2J0zg/One-Plus-11-3-4957.jpg",
       "category": "Phone",
       "price": 899.99,
       "description": "The OnePlus 11 Pro features a smooth 120Hz AMOLED display, Snapdragon 8 Gen 2 chip, and a triple-camera setup.",
@@ -71,7 +71,7 @@
     {
       "product_id": 5,
       "product_title": "Xiaomi Mi 13 Ultra",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/fdVp0n2/xiaomi.png",
       "category": "Phone",
       "price": 1099.99,
       "description": "The Xiaomi Mi 13 Ultra features a Leica-tuned camera system, WQHD+ display, and a 5000mAh battery with ultra-fast charging.",
@@ -88,7 +88,7 @@
     {
       "product_id": 6,
       "product_title": "Sony Xperia 1 V",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/yywfq1R/Sony-Xperia-1-V.jpg",
       "category": "Phone",
       "price": 1199.99,
       "description": "The Sony Xperia 1 V is a filmmaker's dream with its 4K OLED display, advanced video features, and top-notch performance.",
@@ -105,7 +105,7 @@
     {
       "product_id": 7,
       "product_title": "MacBook Pro 16-inch",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/xzjJqCr/macBook.jpg",
       "category": "Laptop",
       "price": 2499.99,
       "description": "The MacBook Pro 16-inch with the M3 Pro chip delivers unparalleled performance and a stunning Liquid Retina XDR display.",
@@ -122,7 +122,7 @@
     {
       "product_id": 8,
       "product_title": "Dell XPS 13 Plus",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/j62n93T/dell-xps-13-plus-2.jpg",
       "category": "Laptop",
       "price": 1899.99,
       "description": "The Dell XPS 13 Plus features an edge-to-edge display, new touch bar interface, and top-of-the-line Intel processors.",
@@ -139,7 +139,7 @@
     {
       "product_id": 9,
       "product_title": "Apple Watch Series 9",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/WGLmnt6/apple-watch.jpg",
       "category": "Smartwatch",
       "price": 399.99,
       "description": "The Apple Watch Series 9 features an improved processor, new health sensors, and a brighter display for an enhanced experience.",
@@ -156,7 +156,7 @@
     {
       "product_id": 10,
       "product_title": "Samsung Galaxy Watch 6",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/M8ppjYC/smart-watch.webp",
       "category": "Smartwatch",
       "price": 349.99,
       "description": "The Samsung Galaxy Watch 6 features a sleek design, advanced health monitoring, and improved battery life with Wear OS.",
@@ -173,7 +173,7 @@
     {
       "product_id": 11,
       "product_title": "AirPods Pro (2nd Generation)",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/Vqzw4s8/airPods.jpg",
       "category": "AirPods",
       "price": 249.99,
       "description": "The AirPods Pro 2nd Gen offer advanced active noise cancellation, personalized spatial audio, and a MagSafe charging case.",
@@ -190,7 +190,7 @@
     {
       "product_id": 12,
       "product_title": "JBL Tune 230NC",
-      "product_image": "url_to_image.jpg",
+      "product_image": "https://i.ibb.co.com/PQLQHtz/01.webp",
       "category": "AirPods",
       "price": 99.99,
       "description": "The JBL Tune 230NC earbuds offer crystal-clear sound, noise cancellation, and up to 40 hours of combined playtime.",
@@ -206,6 +206,5 @@
     }
   ]
   
-      
-  ]
+
   
