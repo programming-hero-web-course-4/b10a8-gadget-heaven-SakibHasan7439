@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { ProductContext } from "../Layout/MainLayouts";
 
 const Navbar = () => {
+    const { addItem } = useContext(ProductContext);
     return (
         <div className="navbar rounded-t-lg bg-purple-600 p-2 md:p-8">
         <div className="navbar-start">
@@ -41,11 +44,11 @@ const Navbar = () => {
         <div className="navbar-end">
             <div className="bg-white p-[11px] rounded-full relative w-10 h-10">
                 <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">0</p>
+                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{addItem.length}</p>
                 </div>
             <div className="bg-white p-[11px] relative rounded-full w-10 h-10">
                 <FaRegHeart></FaRegHeart>
-                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">0</p>
+                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3"></p>
             </div>
         </div>
         </div>

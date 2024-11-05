@@ -13,62 +13,62 @@ import Cart from "./Cart";
 import WishList from "./wishList";
 
 const Router = createBrowserRouter([
-   {
-    path: '/',
-    element: <MainLayouts></MainLayouts>,
-    errorElement: <ErrorPage></ErrorPage>,
+  {
+   path: '/',
+   element: <MainLayouts></MainLayouts>,
+   errorElement: <ErrorPage></ErrorPage>,
 
-    children: [
-      {
-        path: '/',
-        element: <Home></Home>,
-        loader: ()=>fetch('/categoryData.json'),
-        children: [
+   children: [
+    {
+      path: '/',
+      element: <Home></Home>,
+      loader: ()=>fetch('/categoryData.json'),
+      children: [
 
-          {
-            path: 'category/:category',
-            element: <AllProducts></AllProducts>,
-            loader: ()=>fetch('/gadgetData.json')
-          },
+        {
+          path: 'category/:category',
+          element: <AllProducts></AllProducts>,
+          loader: ()=>fetch('/gadgetData.json')
+        },
 
-          {
-            path: '/',
-            element: <AllProducts></AllProducts>,
-            loader: ()=>fetch('/gadgetData.json')
-          },
+        {
+          path: '/',
+          element: <AllProducts></AllProducts>,
+          loader: ()=>fetch('/gadgetData.json')
+        },
 
-        ]
-      },
+      ]
+    },
 
-      {
-        path: '/statistics',
-        element: <Statistics></Statistics>
-      },
+    {
+      path: '/statistics',
+      element: <Statistics></Statistics>
+    },
 
-      {
-        path: '/dashboard',
-        element: <DashBoard></DashBoard>,
-        children: [ 
-          {
-            path: 'cart',
-            element: <Cart></Cart>,
-            loader: ()=>fetch('/gadgetData.json')
-          },
+    {
+      path: '/dashboard',
+      element: <DashBoard></DashBoard>,
+      children: [ 
+        {
+          path: 'cart',
+          element: <Cart></Cart>,
+          loader: ()=>fetch('/gadgetData.json')
+        },
 
-          {
-            path: 'wishList',
-            element: <WishList></WishList>
-          }
-        ]
-      },
+        {
+          path: 'wishList',
+          element: <WishList></WishList>
+        }
+      ]
+    },
 
-      {
-        path: 'product/:product_id',
-        element: <ProductDetails></ProductDetails>,
-        loader: ()=>fetch('/gadgetData.json')
-      },
-    ]
-   }
+     {
+       path: 'product/:product_id',
+       element: <ProductDetails></ProductDetails>,
+       loader: ()=>fetch('/gadgetData.json')
+     },
+   ]
+  }
 ])
 
 export default Router;

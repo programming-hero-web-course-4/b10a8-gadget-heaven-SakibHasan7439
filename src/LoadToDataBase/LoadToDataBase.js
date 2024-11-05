@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const storedCartList = () =>{
     const storedItem = localStorage.getItem("cart-list");
     if(storedItem){
@@ -12,12 +14,22 @@ const storedCartList = () =>{
 const addToCartList = (id) =>{
     const cartList = storedCartList();
     if(cartList.includes(id)){
-        console.log(id,"already exists");
+        toast.error('Item already exists', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
 
     }else {
         cartList.push(id);
         const makeStr = JSON.stringify(cartList);
         localStorage.setItem("cart-list", makeStr);
+        toast("Successfully added");
     }
 }
 
