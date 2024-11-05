@@ -8,7 +8,7 @@ import { storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase
 const Navbar = () => {
     const { addItem, addToWish,setAddItem, setAddToWish } = useContext(ProductContext);
     const location = useLocation();
-    const [bgColor, setBgColor] = useState("#A020F0");
+    const [bgColor, setBgColor] = useState("bg-purple-600");
     const [textColor, setTextColor] = useState("text-black");
 
     useEffect(()=>{
@@ -21,17 +21,17 @@ const Navbar = () => {
         setAddToWish(wishListItemInt);
 
         if(location.pathname === "/"){
-            setBgColor("#A020F0");
+            setBgColor("bg-purple-600");
             setTextColor("text-white");
 
         }else {
-            setBgColor("#ffffff");
-            setTextColor("#000000");
+            setBgColor("bg-white");
+            setTextColor("text-black");
         }
     },[location]);
     // bg-[${bgColor}]
     return (
-        <div className={`navbar rounded-t-lg p-2 md:p-8 bg-[${bgColor}]`}>
+        <div className={`navbar rounded-t-lg p-2 md:p-8 ${bgColor}`}>
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
