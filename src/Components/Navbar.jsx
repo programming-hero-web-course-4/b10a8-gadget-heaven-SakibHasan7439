@@ -1,12 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../Layout/MainLayouts";
 import { storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase";
 
 const Navbar = () => {
     const { addItem, addToWish,setAddItem, setAddToWish } = useContext(ProductContext);
+    const location = useLocation();
+    const [bgColor, setBgColor] = useState("#A020F0");
+    const [textColor, setTextColor] = useState("text-black");
 
     useEffect(()=>{
         const storedCartItems = storedCartList();
@@ -16,16 +19,25 @@ const Navbar = () => {
         const storedWishItem = storedWishList();
         const wishListItemInt = storedWishItem.map((id)=> parseInt(id));
         setAddToWish(wishListItemInt);
-    },[]);
 
+        if(location.pathname === "/"){
+            setBgColor("#A020F0");
+            setTextColor("text-white");
+
+        }else {
+            setBgColor("#ffffff");
+            setTextColor("#000000");
+        }
+    },[location]);
+    // bg-[${bgColor}]
     return (
-        <div className="navbar rounded-t-lg bg-purple-600 p-2 md:p-8">
+        <div className={`navbar rounded-t-lg p-2 md:p-8 bg-[${bgColor}]`}>
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 text-white w-5"
+                className={`h-5 ${textColor} w-5`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -39,16 +51,16 @@ const Navbar = () => {
             <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/'}>Home</NavLink>
+                <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"} `}  to={'/'}>Home</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/statistics'}>Statistics</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/dashboard'}>DashBoard</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/blog'}>Blogs</NavLink>
             </ul>
             </div>
-            <a className="btn btn-ghost text-xl text-white">Gadget Heaven</a>
+            <a className={`btn btn-ghost text-xl ${textColor}`}>Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu text-white text-lg menu-horizontal px-1 flex gap-6">
+            <ul className={`menu ${textColor} text-lg menu-horizontal px-1 flex gap-6`}>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/'}>Home</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/statistics'}>Statistics</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/dashboard'}>DashBoard</NavLink>

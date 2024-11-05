@@ -27,6 +27,8 @@ const Cart = () => {
         const sortedList = [...products].sort((a, b)=> b.price - a.price);
         setProducts(sortedList);
     }
+    {/* Open the modal using document.getElementById('ID').showModal() method */}
+
 
     return (
         <div>
