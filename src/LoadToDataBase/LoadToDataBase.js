@@ -47,12 +47,31 @@ const storedWishList = () =>{
 const addToWishList = (id) =>{
     const cartList = storedWishList();
     if(cartList.includes(id)){
-        console.log(id,"already exists");
+        toast.error('Item Already exist', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
 
     }else {
         cartList.push(id);
         const makeStr = JSON.stringify(cartList);
         localStorage.setItem("wish-list", makeStr);
+        toast.info('Added to WishList', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
 }
 

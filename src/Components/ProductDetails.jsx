@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
-import { addToCartList, addToWishList } from "../LoadToDataBase/LoadToDataBase";
+import { addToCartList, addToWishList, storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase";
 
 const ProductDetails = () => {
     const details = useLoaderData();
@@ -12,9 +12,23 @@ const ProductDetails = () => {
     const makeIntId = parseInt(product_id);
     const [products, setProducts] = useState({});
 
+    const [isAdded, setIsAdded] = useState(false);
+    const [isAddedWishList, setIsAddedWishList] = useState(false);
     useEffect(()=>{
         const product = [...details].find((detail)=> detail.product_id === makeIntId);
         setProducts(product);
+        const cartData = storedCartList();
+        const isAdded = cartData.find((data)=> parseInt(data) === product.product_id);
+        if(isAdded){
+            setIsAdded(true);
+        }
+
+        const wishListData = storedWishList();
+        const isAddedInWishList = wishListData.find((data)=> parseInt(data) === product.product_id);
+        if(isAddedInWishList){
+            setIsAddedWishList(true);
+        }
+
     }, [details, makeIntId]);
 
     const {product_image, product_title, price, availability, Specification, rating, description} = products;
@@ -59,10 +73,10 @@ const ProductDetails = () => {
                             <p className="bg-base-200 px-3 py-1 text-black font-bold rounded-full">{rating}</p>
                         </div>
                         <div className="flex gap-2 items-center">
-                            <button onClick={()=>{handleAddToCart(product_id)}} className="bg-purple-600 flex items-center gap-3 text-white px-6 py-2 rounded-full"><span>Add To Cart </span><MdOutlineShoppingCart className="text-xl"></MdOutlineShoppingCart></button>
-                            <Link onClick={()=>handleAddToWishList(product_id)} className="border-2 p-[11px] w-[40px] h-[40px] rounded-full">
+                            <button disabled={isAdded} onClick={()=>{handleAddToCart(product_id)}} className="bg-purple-600 flex items-center gap-3 text-white px-6 py-2 rounded-full"><span>Add To Cart </span><MdOutlineShoppingCart className="text-xl"></MdOutlineShoppingCart></button>
+                            <button disabled={isAddedWishList} onClick={()=>handleAddToWishList(product_id)} className="border-2 p-[11px] w-[40px] h-[40px] rounded-full">
                                 <FaRegHeart></FaRegHeart>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

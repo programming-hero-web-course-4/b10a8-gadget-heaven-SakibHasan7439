@@ -57,7 +57,8 @@ const Router = createBrowserRouter([
 
         {
           path: 'wishList',
-          element: <WishList></WishList>
+          element: <WishList></WishList>,
+          loader: ()=>fetch('/gadgetData.json')
         }
       ]
     },

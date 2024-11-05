@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ProductContext } from "../Layout/MainLayouts";
 
 const Navbar = () => {
-    const { addItem } = useContext(ProductContext);
+    const { addItem, addToWish } = useContext(ProductContext);
     return (
         <div className="navbar rounded-t-lg bg-purple-600 p-2 md:p-8">
         <div className="navbar-start">
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </div>
             <div className="bg-white p-[11px] relative rounded-full w-10 h-10">
                 <FaRegHeart></FaRegHeart>
-                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3"></p>
+                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{addToWish.length}</p>
             </div>
         </div>
         </div>
