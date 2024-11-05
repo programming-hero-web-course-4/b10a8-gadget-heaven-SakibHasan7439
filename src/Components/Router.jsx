@@ -11,6 +11,7 @@ import AllProducts from "./AllProducts";
 import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
 import WishList from "./wishList";
+import Blog from "../pages/Blog";
 
 const Router = createBrowserRouter([
   {
@@ -61,6 +62,11 @@ const Router = createBrowserRouter([
           loader: ()=>fetch('/gadgetData.json')
         }
       ]
+    },
+
+    {
+      path: '/blog',
+      element: <Blog></Blog>
     },
 
      {

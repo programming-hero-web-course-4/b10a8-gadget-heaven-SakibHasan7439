@@ -42,6 +42,7 @@ const Navbar = () => {
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/'}>Home</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/statistics'}>Statistics</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/dashboard'}>DashBoard</NavLink>
+                <NavLink className={({isActive})=> `${isActive ? "font-bold": "hover:font-bold"}`}  to={'/blog'}>Blogs</NavLink>
             </ul>
             </div>
             <a className="btn btn-ghost text-xl text-white">Gadget Heaven</a>
@@ -51,6 +52,7 @@ const Navbar = () => {
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/'}>Home</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/statistics'}>Statistics</NavLink>
                 <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/dashboard'}>DashBoard</NavLink>
+                <NavLink className={({isActive})=> `${isActive ? "font-bold underline": "hover:font-bold"}`}  to={'/blog'}>Blogs</NavLink>
             </ul>
         </div>
         <div className="navbar-end">

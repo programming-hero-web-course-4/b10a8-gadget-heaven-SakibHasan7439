@@ -1,5 +1,4 @@
 const WishListItems = ({item}) => {
-    console.log(item);
     return (
     <div className="bg-white shadow-md items-center md:flex gap-4 mb-4 p-4 rounded-xl">
         <img className="h-40 w-40 object-cover" src={item.product_image} alt="product image" />
