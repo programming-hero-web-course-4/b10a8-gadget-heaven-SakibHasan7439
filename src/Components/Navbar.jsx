@@ -1,11 +1,23 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductContext } from "../Layout/MainLayouts";
+import { storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase";
 
 const Navbar = () => {
-    const { addItem, addToWish } = useContext(ProductContext);
+    const { addItem, addToWish,setAddItem, setAddToWish } = useContext(ProductContext);
+
+    useEffect(()=>{
+        const storedCartItems = storedCartList();
+        const cartItemsInt = storedCartItems.map((id)=> parseInt(id));
+        setAddItem(cartItemsInt);
+
+        const storedWishItem = storedWishList();
+        const wishListItemInt = storedWishItem.map((id)=> parseInt(id));
+        setAddToWish(wishListItemInt);
+    },[]);
+
     return (
         <div className="navbar rounded-t-lg bg-purple-600 p-2 md:p-8">
         <div className="navbar-start">

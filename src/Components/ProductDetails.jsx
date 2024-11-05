@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { addToCartList, addToWishList, storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase";
+import { ProductContext } from "../Layout/MainLayouts";
 
 const ProductDetails = () => {
     const details = useLoaderData();
+    const { setAddItem, setAddToWish } = useContext(ProductContext);
     const {product_id} = useParams();
     const makeIntId = parseInt(product_id);
     const [products, setProducts] = useState({});
@@ -34,11 +36,20 @@ const ProductDetails = () => {
     const {product_image, product_title, price, availability, Specification, rating, description} = products;
 
     const handleAddToCart = (product_id) =>{
+
         addToCartList(product_id);
+
+        const storedCartItems = storedCartList();
+        const cartItemsInt = storedCartItems.map((id)=> parseInt(id));
+        setAddItem(cartItemsInt);
     }
 
     const handleAddToWishList = (product_id) =>{
         addToWishList(product_id);
+
+        const storedWishItem = storedWishList();
+        const wishListItemInt = storedWishItem.map((id)=> parseInt(id));
+        setAddToWish(wishListItemInt);
     }
 
     return (

@@ -14,7 +14,6 @@ const Cart = () => {
     useEffect(()=>{
         const storedCartItems = storedCartList();
         const cartItemsInt = storedCartItems.map((id)=> parseInt(id));
-        setAddItem(cartItemsInt);
         const allCartItems = productsData.filter((product)=> cartItemsInt.includes(product.product_id));
         const getCopy = [...allCartItems].map((item)=> item.price);
         const totalSum = getCopy.reduce((sum, current)=> current + sum, 0);
