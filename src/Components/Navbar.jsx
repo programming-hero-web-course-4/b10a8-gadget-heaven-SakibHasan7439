@@ -1,24 +1,17 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
-import { useContext, useEffect, useState } from "react";
-import { ProductContext } from "../Layout/MainLayouts";
+import {  useEffect, useState } from "react";
 import { storedCartList, storedWishList } from "../LoadToDataBase/LoadToDataBase";
 
 const Navbar = () => {
-    const { addItem, addToWish,setAddItem, setAddToWish } = useContext(ProductContext);
     const location = useLocation();
     const [bgColor, setBgColor] = useState("bg-purple-600");
     const [textColor, setTextColor] = useState("text-black");
 
+    const totalCartItem = storedCartList();
+    const totalWishItem = storedWishList();
     useEffect(()=>{
-        const storedCartItems = storedCartList();
-        const cartItemsInt = storedCartItems.map((id)=> parseInt(id));
-        setAddItem(cartItemsInt);
-
-        const storedWishItem = storedWishList();
-        const wishListItemInt = storedWishItem.map((id)=> parseInt(id));
-        setAddToWish(wishListItemInt);
 
         if(location.pathname === "/"){
             setBgColor("bg-purple-600");
@@ -29,7 +22,7 @@ const Navbar = () => {
             setTextColor("text-black");
         }
     },[location]);
-    // bg-[${bgColor}]
+
     return (
         <div className={`navbar rounded-t-lg p-2 md:p-8 ${bgColor}`}>
         <div className="navbar-start">
@@ -70,11 +63,11 @@ const Navbar = () => {
         <div className="navbar-end">
             <div className="bg-white p-[11px] rounded-full relative w-10 h-10">
                 <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{addItem.length}</p>
+                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{totalCartItem.length}</p>
                 </div>
             <div className="bg-white p-[11px] relative rounded-full w-10 h-10">
                 <FaRegHeart></FaRegHeart>
-                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{addToWish.length}</p>
+                <p className="absolute bg-white rounded-full w-6 h-6 pl-[8px] left-[18px] -top-3">{totalWishItem.length}</p>
             </div>
         </div>
         </div>

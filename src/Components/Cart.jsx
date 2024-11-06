@@ -29,9 +29,10 @@ const Cart = () => {
         setProducts(sortedList);
     }
 
-    // const handleCloseModal = () =>{
-
-    // }
+    const handleCloseModal = () =>{
+        localStorage.removeItem("cart-list");
+        setPrice(0);
+    }
 
     return (
         <div>
@@ -43,7 +44,7 @@ const Cart = () => {
                 <p className="text-[16px] font-semibold mb-4">Total:{price.toFixed(2)}</p>
                 <div className="justify-center w-full">           
                 <form method="dialog">
-                    <button className="btn w-full rounded-full py-3 bg-base-200">Close</button>
+                    <button onClick={handleCloseModal} className="btn w-full rounded-full py-3 bg-base-200">Close</button>
                 </form>
                 </div>
             </div>
