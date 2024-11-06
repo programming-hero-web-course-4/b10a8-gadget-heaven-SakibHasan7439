@@ -40,7 +40,7 @@ const Cart = () => {
                 <img className="mx-auto" src={success} alt="successful image" />
                 <h2 className="py-2 mb-2 text-xl md:text-2xl font-bold border-b-2">Payment Successful</h2>
                 <p className="text-[16px] font-semibold mb-2">Thanks for purchasing.</p>
-                <p className="text-[16px] font-semibold mb-4">Total:{price}</p>
+                <p className="text-[16px] font-semibold mb-4">Total:{price.toFixed(2)}</p>
                 <div className="justify-center w-full">           
                 <form method="dialog">
                     <button className="btn w-full rounded-full py-3 bg-base-200">Close</button>
