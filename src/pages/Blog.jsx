@@ -5,11 +5,15 @@ import blog3 from "/src/assets/blog-3.webp";
 import blog4 from "/src/assets/blog-4.jpg";
 import blog5 from "/src/assets/blog-5.jpg";
 import blog6 from "/src/assets/blog-6.webp";
+import { Helmet } from "react-helmet-async";
 // import blog6 from "/src/assets/blogImage1.jpg";
 
 const Blog = () => {
     return (
         <div className="p-2 lg:p-6">
+        <Helmet>
+            <title>Gadget Heaven | Blog</title>
+        </Helmet>
             <h1 className="font-bold text-2xl text-center mt-4 md:text-4xl lg:text-5xl mb-4 md:mb-8">Blog page</h1>
             <div className="lg:w-7/12">
                 <h2 className="text-2xl lg:text-4xl font-semibold mb-4">Welcome to Our Gadget Blog!</h2>

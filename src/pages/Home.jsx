@@ -1,12 +1,16 @@
 import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import Category from "../Components/Category";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const categories = useLoaderData();
 
     return (
         <div>
+            <Helmet>
+                <title>Gadget Heaven | Home</title>
+            </Helmet>
             <Banner></Banner>
             <h2 className="text-center text-3xl mb-6 font-semibold">Explore Cutting Edge Gadgets</h2>
             <div className="lg:grid grid-cols-12 gap-4 lg:px-8">

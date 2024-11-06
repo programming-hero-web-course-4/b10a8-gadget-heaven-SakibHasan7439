@@ -1,9 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { storedCartList } from "../LoadToDataBase/LoadToDataBase";
-import CartItems from "./CartItems";
-import { ProductContext } from "../Layout/MainLayouts";
-import { BiSortAlt2 } from "react-icons/bi";
+import { useContext, useEffect, useState } from "react"
+import { useLoaderData } from "react-router-dom"
+import { storedCartList } from "../LoadToDataBase/LoadToDataBase"
+import CartItems from "./CartItems"
+import { ProductContext } from "../Layout/MainLayouts"
+import { BiSortAlt2 } from "react-icons/bi"
+import success from "/src/assets/Group.png"
 
 const Cart = () => {
     const { setAddItem } = useContext(ProductContext);
@@ -27,11 +28,26 @@ const Cart = () => {
         const sortedList = [...products].sort((a, b)=> b.price - a.price);
         setProducts(sortedList);
     }
-    {/* Open the modal using document.getElementById('ID').showModal() method */}
 
+    // const handleCloseModal = () =>{
+
+    // }
 
     return (
         <div>
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box text-center px-12">
+                <img className="mx-auto" src={success} alt="successful image" />
+                <h2 className="py-2 mb-2 text-xl md:text-2xl font-bold border-b-2">Payment Successful</h2>
+                <p className="text-[16px] font-semibold mb-2">Thanks for purchasing.</p>
+                <p className="text-[16px] font-semibold mb-4">Total:{price}</p>
+                <div className="justify-center w-full">           
+                <form method="dialog">
+                    <button className="btn w-full rounded-full py-3 bg-base-200">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
             <div className="flex justify-between px-2 md:px-6">
                 <h2 className="text-xl md:text-2xl mb-4 font-bold">Carts</h2>
                 <div className="flex items-center gap-4">
@@ -40,7 +56,7 @@ const Cart = () => {
                         <p className="text-purple-600 font-semibold">Sort by price</p>
                         <BiSortAlt2 className="text-purple-600 text-xl"></BiSortAlt2>
                     </button>
-                    <button className="px-5 py-2 rounded-full bg-purple-600 text-white font-semibold">Purchase</button>
+                    <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="px-5 py-2 rounded-full bg-purple-600 text-white font-semibold">Purchase</button>
                 </div>
             </div>
             {
