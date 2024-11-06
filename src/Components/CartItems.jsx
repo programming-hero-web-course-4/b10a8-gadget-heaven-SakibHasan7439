@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const CartItems = ({product}) => {
     return (
         <div className="bg-white shadow-md items-center md:flex gap-4 mb-4 p-4 rounded-xl">

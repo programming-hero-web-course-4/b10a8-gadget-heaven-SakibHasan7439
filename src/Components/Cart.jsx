@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, useNavigate } from "react-router-dom"
 import { storedCartList } from "../LoadToDataBase/LoadToDataBase"
 import CartItems from "./CartItems"
 import { ProductContext } from "../Layout/MainLayouts"
@@ -11,6 +11,7 @@ const Cart = () => {
     const [price, setPrice] = useState(0);
     const [products, setProducts] = useState([]);
     const productsData = useLoaderData();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         const storedCartItems = storedCartList();
@@ -32,6 +33,7 @@ const Cart = () => {
     const handleCloseModal = () =>{
         localStorage.removeItem("cart-list");
         setPrice(0);
+        navigate('/');
     }
 
     return (
